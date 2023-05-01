@@ -1,11 +1,13 @@
+import Link from 'next/link'
 
 const Nav = () => {
   return (
-    <div w>{/* Main navigation container */}
-        <nav className="flex-no-wrap relative flex w-full items-center justify-between bg-neutral-100 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4" data-te-navbar-ref>
+    <div>
+        {/* Main navigation container */}
+        <nav className="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-2 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start lg:py-4" data-te-navbar-ref>
         <div className="flex w-full flex-wrap items-center justify-between px-3">
             {/* Hamburger button for mobile view */}
-            <button className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden" type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="block border-0 bg-transparent px-2 text-neutral-200 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden" type="button" data-te-collapse-init data-te-target="#navbarSupportedContent4" aria-controls="navbarSupportedContent4" aria-expanded="false" aria-label="Toggle navigation">
             {/* Hamburger icon */}
             <span className="[&>svg]:w-7">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7">
@@ -14,31 +16,44 @@ const Nav = () => {
             </span>
             </button>
             {/* Collapsible navigation container */}
-            <div className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContent1" data-te-collapse-item>
-            {/* Logo */}
-            <a className="mb-4 mr-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0" href="#">
-                <img src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp" style={{height: 15}} alt loading="lazy" />
-            </a>
+            <div className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto" id="navbarSupportedContent4" data-te-collapse-item>
+            {/* Navbar title */}
+            <a className="pr-2 text-2xl font-semibold text-white" href="#">PARS CLICK</a>
             {/* Left navigation links */}
             <ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
-                <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
                 {/* Dashboard link */}
-                <a className="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400" href="#" data-te-nav-link-ref>Dashboard</a>
+                <li className="my-4 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+                    <Link className="text-white 
+                                disabled:text-black/30 
+                                    lg:px-2 
+                                [&.active]:text-black/90 
+                                dark:[&.active]:text-neutral-400" 
+                                href="/" data-te-nav-link-ref>Home</Link>
                 </li>
                 {/* Team link */}
                 <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                <a className="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#" data-te-nav-link-ref>Team</a>
+                    <Link className="
+                                p-0 
+                                text-white 
+                                opacity-60 
+                                hover:opacity-80 
+                                focus:opacity-80 
+                                disabled:text-black/30 
+                                lg:px-2 
+                                [&.active]:text-black/90 
+                                dark:[&.active]:text-neutral-400" 
+                                href="/about" data-te-nav-link-ref>About</Link>
                 </li>
                 {/* Projects link */}
                 <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                <a className="text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#" data-te-nav-link-ref>Projects</a>
+                <a className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#" data-te-nav-link-ref>Projects</a>
                 </li>
             </ul>
             </div>
             {/* Right elements */}
             <div className="relative flex items-center">
             {/* Cart Icon */}
-            <a className="mr-4 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#">
+            <a className="mr-4 text-white opacity-60 hover:opacity-80 focus:opacity-80" href="#">
                 <span className="[&>svg]:w-5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
                     <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
@@ -48,7 +63,7 @@ const Nav = () => {
             {/* Container with two dropdown menus */}
             <div className="relative" data-te-dropdown-ref>
                 {/* First dropdown trigger */}
-                <a className="hidden-arrow mr-4 flex items-center text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#" id="dropdownMenuButton1" role="button" data-te-dropdown-toggle-ref aria-expanded="false">
+                <a className="hidden-arrow mr-4 flex items-center text-white opacity-60 hover:opacity-80 focus:opacity-80" href="#" id="dropdownMenuButton1" role="button" data-te-dropdown-toggle-ref aria-expanded="false">
                 {/* Dropdown trigger icon */}
                 <span className="[&>svg]:w-5">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -56,7 +71,7 @@ const Nav = () => {
                     </svg>
                 </span>
                 {/* Notification counter */}
-                <span className="absolute -mt-2.5 ml-2 rounded-[0.37rem] bg-danger px-[0.45em] py-[0.2em] text-[0.6rem] leading-none text-white">1</span>
+                <span className="absolute -mt-2.5 ml-2 rounded-full bg-red-700 px-1.5 py-0 text-xs text-white">1</span>
                 </a>
                 {/* First dropdown menu */}
                 <ul className="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block" aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
@@ -94,10 +109,12 @@ const Nav = () => {
                 </ul>
             </div>
             </div>
+            {/* Right elements */}
         </div>
         </nav>
+</div>
 
-    </div>
+
   )
 }
 
