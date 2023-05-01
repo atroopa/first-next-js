@@ -46,7 +46,16 @@ const Nav = () => {
                 </li>
                 {/* Projects link */}
                 <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                <a className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#" data-te-nav-link-ref>Projects</a>
+                    <Link className=" 
+                                    p-0 
+                                    text-white 
+                                    opacity-60 
+                                    hover:opacity-80 
+                                    focus:opacity-80 
+                                    disabled:text-black/30 
+                                    lg:px-2 
+                                    [&.active]:text-black/90 
+                                    dark:[&.active]:text-neutral-400" href="/contact" data-te-nav-link-ref>Contact</Link>
                 </li>
             </ul>
             </div>
